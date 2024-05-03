@@ -13,6 +13,7 @@
 		D23C71F42BD8A95F00C400F7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D23C71F32BD8A95F00C400F7 /* Base */; };
 		D23C71F62BD8A96000C400F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D23C71F52BD8A96000C400F7 /* Assets.xcassets */; };
 		D23C71F92BD8A96000C400F7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D23C71F82BD8A96000C400F7 /* Base */; };
+		E0A472542BE47CEA00CCB19C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A472532BE47CEA00CCB19C /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D23C71F52BD8A96000C400F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D23C71F82BD8A96000C400F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D23C71FA2BD8A96000C400F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0A472532BE47CEA00CCB19C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				D23C71EE2BD8A95F00C400F7 /* SceneDelegate.swift */,
 				D23C71F02BD8A95F00C400F7 /* ViewController.swift */,
 				D23C71F22BD8A95F00C400F7 /* Main.storyboard */,
+				E0A472532BE47CEA00CCB19C /* HomeViewController.swift */,
 				D23C71F52BD8A96000C400F7 /* Assets.xcassets */,
 				D23C71F72BD8A96000C400F7 /* LaunchScreen.storyboard */,
 				D23C71FA2BD8A96000C400F7 /* Info.plist */,
@@ -141,6 +144,7 @@
 				D23C71F12BD8A95F00C400F7 /* ViewController.swift in Sources */,
 				D23C71ED2BD8A95F00C400F7 /* AppDelegate.swift in Sources */,
 				D23C71EF2BD8A95F00C400F7 /* SceneDelegate.swift in Sources */,
+				E0A472542BE47CEA00CCB19C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
