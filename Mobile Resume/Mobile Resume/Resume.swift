@@ -16,17 +16,11 @@ struct Resume {
     var email: String
     var jobs: [String : String]
     var education: [String]
-    var skills: [Skill]
+    var skills: [String : SkillType]
     
-    init(fName: String, lName: String, address: String, phone: String, email: String, jobs: [String:String], education: [String], skills: [Skill]) {
-        self.fName = fName
-        self.lName = lName
-        self.address = address
-        self.phone = phone
-        self.email = email
-        self.jobs = jobs
-        self.education = education
-        self.skills = skills
+    func stringify() -> String {
+        let resumeText = "Name: \(self.fName) \(self.lName)\nAddress: \(self.address)\nPhone: \(self.phone)\tEmail: \(self.email)"
+        return resumeText
     }
 }
 
@@ -48,15 +42,15 @@ struct Resume {
 //    }
 //}
 
-struct Skill {
-    let skillname: String
-    var skillType: SkillType
-    
-    init(skillname: String, skillType: SkillType) {
-        self.skillname = skillname
-        self.skillType = skillType
-    }
-}
+//struct Skill {
+//    let skillname: String
+//    var skillType: SkillType
+//    
+//    init(skillname: String, skillType: SkillType) {
+//        self.skillname = skillname
+//        self.skillType = skillType
+//    }
+//}
 
 enum SkillType {
     case progLanguage, technology, communication, management, misc
