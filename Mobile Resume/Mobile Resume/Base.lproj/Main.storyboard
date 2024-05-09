@@ -465,7 +465,7 @@
         <!--Share-->
         <scene sceneID="bdB-c2-rGy">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fX3-eQ-vJX" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fX3-eQ-vJX" customClass="ShareViewController" customModule="Mobile_Resume" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Share" image="rectangle.portrait.and.arrow.right.fill" catalog="system" id="BR4-j2-8AE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hiH-E7-9y8">
