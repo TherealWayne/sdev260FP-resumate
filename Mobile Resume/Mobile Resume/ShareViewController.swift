@@ -11,6 +11,7 @@ class ShareViewController: UIViewController {
 
     @IBOutlet weak var resumeDisplay: UILabel!
     
+    //@IBOutlet weak var resumeDisplay: UILabel!
     
     var myResume: Resume = Resume(
         fName: "Steve",
