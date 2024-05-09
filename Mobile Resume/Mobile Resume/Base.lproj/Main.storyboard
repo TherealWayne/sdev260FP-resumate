@@ -199,6 +199,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMu-zQ-Dnt">
+                                <rect key="frame" x="283" y="644" width="54" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Edit"/>
+                                <connections>
+                                    <segue destination="gSE-kE-2tf" kind="show" id="Wvq-Ha-KQj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8bP-xV-kR9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -208,6 +217,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Afi-yD-juz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1599" y="843"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Alv-6I-wh9">
+            <objects>
+                <viewController id="gSE-kE-2tf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QW5-AL-MHH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="npz-Ka-0X3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bnQ-bg-HQd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4dK-oy-nbW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2329" y="843"/>
         </scene>
         <!--Item-->
         <scene sceneID="BPs-vV-pq2">
@@ -266,6 +291,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="8aH-Du-2Jr"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dqC-Du-smZ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
