@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		803861CB2BEDFBF5006C4A7E /* CoverLetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803861CA2BEDFBF5006C4A7E /* CoverLetterViewController.swift */; };
 		D23C71ED2BD8A95F00C400F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C71EC2BD8A95F00C400F7 /* AppDelegate.swift */; };
 		D23C71EF2BD8A95F00C400F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C71EE2BD8A95F00C400F7 /* SceneDelegate.swift */; };
 		D23C71F12BD8A95F00C400F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C71F02BD8A95F00C400F7 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		803861CA2BEDFBF5006C4A7E /* CoverLetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverLetterViewController.swift; sourceTree = "<group>"; };
 		D23C71E92BD8A95F00C400F7 /* Mobile Resume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Resume.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23C71EC2BD8A95F00C400F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D23C71EE2BD8A95F00C400F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				D269F7402BEBD8020046F6AA /* Resume.swift */,
 				D29A81092BED4A720046E9D4 /* ShareViewController.swift */,
 				E0A472532BE47CEA00CCB19C /* HomeViewController.swift */,
+				803861CA2BEDFBF5006C4A7E /* CoverLetterViewController.swift */,
 				D23C71F52BD8A96000C400F7 /* Assets.xcassets */,
 				D23C71F72BD8A96000C400F7 /* LaunchScreen.storyboard */,
 				D23C71FA2BD8A96000C400F7 /* Info.plist */,
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				803861CB2BEDFBF5006C4A7E /* CoverLetterViewController.swift in Sources */,
 				D29A810A2BED4A720046E9D4 /* ShareViewController.swift in Sources */,
 				D23C71F12BD8A95F00C400F7 /* ViewController.swift in Sources */,
 				D269F7412BEBD8020046F6AA /* Resume.swift in Sources */,
@@ -312,6 +316,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -340,6 +345,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
