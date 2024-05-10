@@ -19,39 +19,59 @@ struct Resume {
     var skills: [String : SkillType]
     
     func stringify() -> String {
-        let resumeText = "Name: \(self.fName) \(self.lName)\nAddress: \(self.address)\nPhone: \(self.phone)\tEmail: \(self.email)"
+        let resumeText = "Name: \(self.fName) \(self.lName)\nAddress: \(self.address)\nPhone: \(self.phone)\nEmail: \(self.email)\nWork History:\n \(chopJobs(jobs: jobs))Education:\n\(chopSchools(schools: education))\n"
         return resumeText
+    }
+    
+    func chopJobs(jobs: [String:String]) -> String {
+        var workHistory = ""
+        for (job, duty) in jobs {
+            workHistory += "\tEmployer: \(job)\n\tPosition: \(duty)\n"
+        }
+        return workHistory
+    }
+    
+    func chopSchools(schools: [String]) -> String {
+        var education = ""
+        for school in schools {
+            education  += "\t\(school)\n"
+        }
+        return education
     }
 }
 
 
-//struct Job {
-//    var Employer: String
-//    var Description: String
-//}
+//---------------MOHAMMED------------------------------------
+// Data structure for Resume Cover letter.  Instantiate with:
+// var coverText: CoverLetter = CoverLetter(content: String)
+// set your label .text = coverText.format()
+// see ShareViewController.swift for example.
 
-//struct School {
-//    var schoolname: String
-//}
+struct CoverLetter {
+    var content: String
+    
+    func format() -> String {
+        return content
+    }
+}
 
-//struct Skills {
-//    var skill: [Skill]
-//    
-//    init(skill: [Skill]) {
-//        self.skill = skill
-//    }
-//}
 
-//struct Skill {
-//    let skillname: String
-//    var skillType: SkillType
-//    
-//    init(skillname: String, skillType: SkillType) {
-//        self.skillname = skillname
-//        self.skillType = skillType
-//    }
-//}
 
 enum SkillType {
     case progLanguage, technology, communication, management, misc
+    
+    var description: String {
+        switch self {
+        case .progLanguage:
+            return "Programming Language"
+        case .technology:
+            return "Technology"
+        case .communication:
+            return "Communication"
+        case .management:
+            return "Management"
+        case .misc:
+            return "Miscelleneous"
+        }
+    }
 }
