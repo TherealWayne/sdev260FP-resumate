@@ -6,17 +6,27 @@
 //
 
 import UIKit
+import Foundation
 
 class ShareViewController: UIViewController {
 
-    @IBOutlet weak var resumeDisplay: UILabel!
-    @IBOutlet weak var coverLetterDisplay: UILabel!
 
+    @IBOutlet weak var emailResume: UIButton!
+    @IBOutlet weak var IGResume: UIButton!
+    @IBOutlet weak var FBResume: UIButton!
+    @IBOutlet weak var LinkedInResume: UIButton!
+    
+
+    // Playing with persistent data, need to do using URL and apple classes
+    let fileManager = FileManager.default
+    let filePath = "myfile.txt"
+    
+    
     
     var myResume: Resume = Resume(
         fName: "Steve",
         lName: "Jobs",
-        address: "Infinite Loop, Cupertino, CA 11111",
+        address: "One Infinite Loop, Cupertino, CA 95014",
         phone: "555-555-5555",
         email: "sjobs@example.com",
         jobs: ["McDonalds" : "Dishwasher", "Wendy's" : "Assistant Manager"],
@@ -35,29 +45,51 @@ class ShareViewController: UIViewController {
         // Scott Testing data
         print("in ShareViewController vDL()")
         print(myResume)
-        updateView()
+        // updateView()
+        
+        // Filesystem stuff, doesnt exist not sure where this checks
+        if fileManager.fileExists(atPath: filePath) {
+            print("file exists")
+        } else {
+            print("file does not exist")
+        }
     
     }
+    
+    
+    @IBAction func emailButtonPressed(_ sender: Any) {
+        print("Email button pressed.")
+    }
+    
+    @IBAction func igButtonPressed(_ sender: Any) {
+        print("Instagram button pressed.")
+    }
+    
+    
+    
+    @IBAction func fbButtonPressed(_ sender: Any) {
+        print("Facebook button pressed.")
+    }
+    
+    
+    @IBAction func linkedInButtonPressed(_ sender: Any) {
+        print("LinkedIn button pressed.")
+    }
+    
+    
+    
     
     // Called to update the contents of the Share View Controller view.
     // resume and cover letter are instantiated above following the structs in
     // Resume.swift The stringify() and format() methods simply return
     // formatted text that we set the UILabel.text values to (outlets above)
     
-    func updateView() {
-        
-        resumeDisplay.text = myResume.stringify()
-        coverLetterDisplay.text = coverText.format()
-    }
+//    func updateView() {
+//        
+//        resumeDisplay.text = myResume.stringify()
+//        coverLetterDisplay.text = coverText.format()
+//    }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

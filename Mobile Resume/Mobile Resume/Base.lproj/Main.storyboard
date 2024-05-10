@@ -192,58 +192,135 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cT7-dm-oLX">
-                                <rect key="frame" x="45" y="142" width="304" height="224"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share your resume:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Try-kx-kNM">
+                                <rect key="frame" x="30" y="76" width="147.66666666666666" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMu-zQ-Dnt">
-                                <rect key="frame" x="283" y="644" width="54" height="35"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="pwH-iw-QjO">
+                                <rect key="frame" x="30" y="136.33333333333334" width="100" height="437.33333333333326"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61r-OF-CUa">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Email"/>
+                                        <connections>
+                                            <action selector="emailButtonPressed:" destination="aYa-Ph-gsH" eventType="touchUpInside" id="Oe0-iD-lor"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cV-mO-IA5">
+                                        <rect key="frame" x="0.0" y="134.33333333333334" width="100" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Instagram"/>
+                                        <connections>
+                                            <action selector="igButtonPressed:" destination="aYa-Ph-gsH" eventType="touchUpInside" id="irE-MQ-gkA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5MA-2V-Lrd">
+                                        <rect key="frame" x="0.0" y="268.66666666666663" width="100" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Facebook"/>
+                                        <connections>
+                                            <action selector="fbButtonPressed:" destination="aYa-Ph-gsH" eventType="touchUpInside" id="4lf-zQ-07C"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXS-FO-svw">
+                                        <rect key="frame" x="0.0" y="403" width="100" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="LinkedIn"/>
+                                        <connections>
+                                            <action selector="linkedInButtonPressed:" destination="aYa-Ph-gsH" eventType="touchUpInside" id="zXU-oT-NoM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelope.fill" catalog="system" id="HRP-1a-JLi">
+                                <rect key="frame" x="164" y="115.33333333333337" width="64" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-40IG" id="m9C-2b-SvD">
+                                <rect key="frame" x="172" y="247" width="61" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon-40" translatesAutoresizingMaskIntoConstraints="NO" id="57M-zK-tA3">
+                                <rect key="frame" x="171" y="394" width="62" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMu-zQ-Dnt">
+                                <rect key="frame" x="319.66666666666669" y="748.66666666666663" width="53.333333333333314" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Edit"/>
                                 <connections>
                                     <segue destination="gSE-kE-2tf" kind="show" id="Wvq-Ha-KQj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mX7-Dw-j33">
-                                <rect key="frame" x="45" y="390" width="304" height="236"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon-40 1" translatesAutoresizingMaskIntoConstraints="NO" id="7H0-Ee-SPT">
+                                <rect key="frame" x="164" y="532" width="74" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8bP-xV-kR9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Try-kx-kNM" firstAttribute="top" secondItem="8bP-xV-kR9" secondAttribute="top" constant="20" id="0Md-yq-r3m"/>
+                            <constraint firstItem="8bP-xV-kR9" firstAttribute="bottom" secondItem="cMu-zQ-Dnt" secondAttribute="bottom" constant="20" id="63B-DJ-JpT"/>
+                            <constraint firstItem="Try-kx-kNM" firstAttribute="leading" secondItem="8bP-xV-kR9" secondAttribute="leading" constant="30" id="K4l-Wy-XVD"/>
+                            <constraint firstItem="8bP-xV-kR9" firstAttribute="trailing" secondItem="cMu-zQ-Dnt" secondAttribute="trailing" constant="20" id="O9m-S1-ahh"/>
+                            <constraint firstItem="pwH-iw-QjO" firstAttribute="top" secondItem="Try-kx-kNM" secondAttribute="bottom" constant="40" id="RLC-tm-dgt"/>
+                            <constraint firstItem="pwH-iw-QjO" firstAttribute="leading" secondItem="8bP-xV-kR9" secondAttribute="leading" constant="30" id="fdG-q0-0pu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bQp-1f-m2c"/>
                     <connections>
-                        <outlet property="coverLetterDisplay" destination="mX7-Dw-j33" id="hdf-tS-UkZ"/>
-                        <outlet property="resumeDisplay" destination="cT7-dm-oLX" id="yRg-s0-82t"/>
+                        <outlet property="FBResume" destination="5MA-2V-Lrd" id="dmd-gV-Q4X"/>
+                        <outlet property="IGResume" destination="3cV-mO-IA5" id="A9L-Cn-bkb"/>
+                        <outlet property="LinkedInResume" destination="JXS-FO-svw" id="NeA-zz-RxH"/>
+                        <outlet property="emailResume" destination="61r-OF-CUa" id="7kj-d0-a1P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Afi-yD-juz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1597.709923664122" y="842.95774647887333"/>
         </scene>
-        <!--View Controller-->
+        <!--Share Edit View Controller-->
         <scene sceneID="Alv-6I-wh9">
             <objects>
-                <viewController id="gSE-kE-2tf" sceneMemberID="viewController">
+                <viewController id="gSE-kE-2tf" customClass="ShareEditViewController" customModule="Mobile_Resume" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QW5-AL-MHH">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OfD-4t-IS3">
+                                <rect key="frame" x="52" y="167" width="50" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Steve Jobs" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OdG-46-b62">
+                                <rect key="frame" x="110" y="160" width="227" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="editName:" destination="gSE-kE-2tf" eventType="editingDidEnd" id="lgF-rF-7Pk"/>
+                                    <action selector="nameEntry:" destination="24P-FG-gCj" eventType="editingDidEnd" id="99C-8a-022"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="npz-Ka-0X3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="bnQ-bg-HQd"/>
+                    <connections>
+                        <outlet property="editName" destination="OdG-46-b62" id="Cso-aV-cwc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4dK-oy-nbW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="24P-FG-gCj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2329" y="843"/>
+            <point key="canvasLocation" x="2327.4809160305344" y="842.95774647887333"/>
         </scene>
         <!--Item-->
         <scene sceneID="BPs-vV-pq2">
@@ -357,7 +434,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="msU-HC-g57">
-                                <rect key="frame" x="16" y="111" width="114.33333333333331" height="271.66666666666669"/>
+                                <rect key="frame" x="15.999999999999993" y="111" width="114.33333333333331" height="271.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PF1-8X-goP">
                                         <rect key="frame" x="0.0" y="0.0" width="114.33333333333333" height="20.333333333333332"/>
@@ -448,8 +525,8 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TW6-1e-Tc7">
-                                <rect key="frame" x="16" y="642" width="39.333333333333343" height="64.333333333333371"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TW6-1e-Tc7">
+                                <rect key="frame" x="16.000000000000004" y="642" width="39.333333333333343" height="64.333333333333371"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skills" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fff-Zb-E8k">
                                         <rect key="frame" x="0.0" y="0.0" width="39.333333333333336" height="20.333333333333332"/>
@@ -562,6 +639,10 @@
         <segue reference="2dM-em-yZr"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Icon-40" width="40" height="40"/>
+        <image name="Icon-40 1" width="40" height="9"/>
+        <image name="Icon-40IG" width="40" height="40"/>
+        <image name="envelope.fill" catalog="system" width="128" height="85"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="music.note.house.fill" catalog="system" width="128" height="104"/>
         <image name="rectangle.portrait.and.arrow.right.fill" catalog="system" width="128" height="108"/>
