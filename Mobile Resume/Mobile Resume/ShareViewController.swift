@@ -4,24 +4,30 @@
 //
 //  Created by Scott Parrish on 5/9/24.
 //
+// Handle events in the Share view.  Needs cleaning up, I did much of the testing
+// for data handling and display in this file so as not to affect files that the
+// other team members depended on.  Results of much of this has been moved to
+// HomeViewController.swift though some has been left as an example for RM.
 
 import UIKit
+import Foundation
 
 class ShareViewController: UIViewController {
 
-    @IBOutlet weak var resumeDisplay: UILabel!
-    @IBOutlet weak var coverLetterDisplay: UILabel!
 
+    @IBOutlet weak var emailResume: UIButton!
+    @IBOutlet weak var IGResume: UIButton!
+    @IBOutlet weak var FBResume: UIButton!
+    @IBOutlet weak var LinkedInResume: UIButton!
     
-    var myResume: Resume = Resume(
-        fName: "Steve",
-        lName: "Jobs",
-        address: "Infinite Loop, Cupertino, CA 11111",
-        phone: "555-555-5555",
-        email: "sjobs@example.com",
-        jobs: ["McDonalds" : "Dishwasher", "Wendy's" : "Assistant Manager"],
-        education: ["East-West High School", "College of Palo Alto"],
-        skills: ["Python":SkillType.progLanguage, "Project Management":SkillType.management])
+
+    // Playing with persistent data, need to do using URL and apple classes
+    let fileManager = FileManager.default
+    let filePath = "myfile.txt"
+    
+    
+    
+
     
     // Example for CoverLetter <--------Mohammed---------------
     // for now, just use dummy text and get it displayed on the screen (see below)
@@ -32,32 +38,53 @@ class ShareViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        // Scott Testing data
-        print("in ShareViewController vDL()")
-        print(myResume)
-        updateView()
+        // Scott Testing
+        // print("in ShareViewController vDL()")
+        // print(myResume)
+        // updateView()
+        
+        // Filesystem stuff, doesnt exist not sure where this checks.  Needs
+        // to be done using Apple API instead of general Swift.
+        
+        if fileManager.fileExists(atPath: filePath) {
+            print("file exists")
+        } else {
+            print("file does not exist")
+        }
     
     }
+    
+    // Stubs for sharing buttons.
+    @IBAction func emailButtonPressed(_ sender: Any) {
+        print("Email button pressed.")
+    }
+    
+    @IBAction func igButtonPressed(_ sender: Any) {
+        print("Instagram button pressed.")
+    }
+    
+    @IBAction func fbButtonPressed(_ sender: Any) {
+        print("Facebook button pressed.")
+    }
+    
+    
+    @IBAction func linkedInButtonPressed(_ sender: Any) {
+        print("LinkedIn button pressed.")
+    }
+    
+    
+    
     
     // Called to update the contents of the Share View Controller view.
     // resume and cover letter are instantiated above following the structs in
     // Resume.swift The stringify() and format() methods simply return
     // formatted text that we set the UILabel.text values to (outlets above)
     
-    func updateView() {
-        
-        resumeDisplay.text = myResume.stringify()
-        coverLetterDisplay.text = coverText.format()
-    }
+//    func updateView() {
+//        
+//        resumeText.text = myResume.stringify()
+//    }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
