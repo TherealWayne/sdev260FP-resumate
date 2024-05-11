@@ -4,6 +4,10 @@
 //
 //  Created by Scott Parrish on 5/9/24.
 //
+// Handle events in the Share view.  Needs cleaning up, I did much of the testing
+// for data handling and display in this file so as not to affect files that the
+// other team members depended on.  Results of much of this has been moved to
+// HomeViewController.swift though some has been left as an example for RM.
 
 import UIKit
 import Foundation
@@ -23,15 +27,7 @@ class ShareViewController: UIViewController {
     
     
     
-    var myResume: Resume = Resume(
-        fName: "Steve",
-        lName: "Jobs",
-        address: "One Infinite Loop, Cupertino, CA 95014",
-        phone: "555-555-5555",
-        email: "sjobs@example.com",
-        jobs: ["McDonalds" : "Dishwasher", "Wendy's" : "Assistant Manager"],
-        education: ["East-West High School", "College of Palo Alto"],
-        skills: ["Python":SkillType.progLanguage, "Project Management":SkillType.management])
+
     
     // Example for CoverLetter <--------Mohammed---------------
     // for now, just use dummy text and get it displayed on the screen (see below)
@@ -42,12 +38,14 @@ class ShareViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        // Scott Testing data
-        print("in ShareViewController vDL()")
-        print(myResume)
+        // Scott Testing
+        // print("in ShareViewController vDL()")
+        // print(myResume)
         // updateView()
         
-        // Filesystem stuff, doesnt exist not sure where this checks
+        // Filesystem stuff, doesnt exist not sure where this checks.  Needs
+        // to be done using Apple API instead of general Swift.
+        
         if fileManager.fileExists(atPath: filePath) {
             print("file exists")
         } else {
@@ -56,7 +54,7 @@ class ShareViewController: UIViewController {
     
     }
     
-    
+    // Stubs for sharing buttons.
     @IBAction func emailButtonPressed(_ sender: Any) {
         print("Email button pressed.")
     }
@@ -64,8 +62,6 @@ class ShareViewController: UIViewController {
     @IBAction func igButtonPressed(_ sender: Any) {
         print("Instagram button pressed.")
     }
-    
-    
     
     @IBAction func fbButtonPressed(_ sender: Any) {
         print("Facebook button pressed.")
@@ -86,8 +82,7 @@ class ShareViewController: UIViewController {
     
 //    func updateView() {
 //        
-//        resumeDisplay.text = myResume.stringify()
-//        coverLetterDisplay.text = coverText.format()
+//        resumeText.text = myResume.stringify()
 //    }
 
     

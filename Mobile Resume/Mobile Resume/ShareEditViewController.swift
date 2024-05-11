@@ -20,25 +20,14 @@ class ShareEditViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+// Action to show text captured form the text field.
     @IBAction func editName(_ sender: UITextField) {
         if let name = editName.text {
-            print(name)
+            print("Sending to: \(name)")
         }
        
     }
     
     
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
